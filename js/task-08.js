@@ -1,14 +1,14 @@
 const userForm = document.querySelector(".login-form");
 
-userForm.addEventListener("submit", formSubmit);
+userForm.addEventListener("submit", onUserFormSubmit);
 
-function formSubmit(event) {
+function onUserFormSubmit(event) {
   event.preventDefault();
   const {
     elements: { email, password },
   } = event.currentTarget;
 
-  if (email.value === "" || password.value === "") {
+  if (!email.value || !password.value) {
     return alert("Please, fill in all the fields");
   }
 

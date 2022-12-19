@@ -12,7 +12,7 @@ outputEl.style.color = "tomato";
 hi.style.color = "green";
 
 inputEl.addEventListener("input", (event) => {
-  if (event.target.value === "") {
+  if (!event.target.value) {
     outputEl.textContent = "Anonymous";
 
     return;
@@ -20,3 +20,35 @@ inputEl.addEventListener("input", (event) => {
 
   outputEl.textContent = event.target.value;
 });
+
+
+// const refs = {
+//   inputEl: document.querySelector('#name-input'),
+//   outputEl: document.querySelector('#name-output'),
+// }
+
+// refs.inputEl.addEventListener('input', onInputElChange);
+
+// function onRefsInputElChange(event) {
+
+//   refs.outputEl.textContent = event.currentTarget.value;
+
+//   if (event.currentTarget.value === '') {
+//   refs.outputEl.textContent = 'Anonymous'
+// }
+// }
+
+
+// const refs = {
+//     inputEl: document.querySelector('#name-input'),
+//     outputEl: document.querySelector('#name-output'),
+//   }
+  
+//   refs.inputEl.addEventListener('input', (event) => {
+  
+//     refs.outputEl.textContent = event.currentTarget.value;
+//     if (event.currentTarget.value === '') {
+//         refs.outputEl.textContent = 'Anonymous'
+//       }
+//   });
+  
